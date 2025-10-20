@@ -7,15 +7,30 @@ spring:
   cloud:
     config:
       server:
+		vault:
+          host: localhost
+          port: 8200
+          scheme: http
+          token: myroot
+          kv-version: 2
+          backend: secret
         git:
           uri: https://github.com/ermiasashebr/cloud-config
           clone-on-start: true
           default-label: main
+        
+
 
 management:
   endpoints:
     web:
       exposure:
         include: health,info,env,refresh,beans,metrics,threaddump	  
+
+logging:
+  level:
+    org.springframework.cloud.config.server.environment: DEBUG
+    org.springframework.vault: DEBUG
+
           
 
