@@ -11,5 +11,11 @@ spring:
           uri: https://github.com/ermiasashebr/cloud-config
           clone-on-start: true
           default-label: main
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,env,refresh,beans,metrics,threaddump	  
           
 
