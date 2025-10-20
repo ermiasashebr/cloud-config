@@ -5,15 +5,15 @@ spring:
   application:
     name: cloudConfig
   cloud:
+    vault:
+      host: localhost
+      port: 8200
+      scheme: http
+      token: myroot
+      kv-version: 2
+      backend: secret
     config:
       server:
-        vault:
-          host: localhost
-          port: 8200
-          scheme: http
-          token: myroot
-          kv-version: 2
-          backend: secret
         git:
           uri: https://github.com/ermiasashebr/cloud-config
           clone-on-start: true
