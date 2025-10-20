@@ -3,4 +3,4 @@ spring:
       name: demo
 app:
    demo:
-      value: Ermi
+      value: Ermi Linux
