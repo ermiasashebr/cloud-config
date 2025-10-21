@@ -2,22 +2,10 @@ server:
   port: 8888
 
 spring:
-  main:
-    allow-bean-definition-overriding: true		
   application:
     name: cloudConfig
   cloud:
-    vault:
-      host: localhost
-      port: 8200
-      scheme: http
-      uri: http://localhost:8200	  
-      token: myroot
-      kv-version: 2
-      backend: secret
     config:
-      import:
-        vault://				
       server:
         git:
           uri: https://github.com/ermiasashebr/cloud-config
